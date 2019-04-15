@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Approve Button Component</title>
+    <script src="./src/ApproveButton.js"></script>
+</head>
+
+<body>
+
+    <style>
+        .approveBtn {
+            display: flex;
+        }
+
+        .approveBtn div {
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+
+        .approveBtn div.approved{
+            border: 2px solid #27ae60;
+        }
+
+        .approveBtn div.approved:hover{
+            background: #2ecc71;
+            color: white;
+            font-weight: bold;
+        }
+
+        .approveBtn div.rejected{
+            border: 2px solid #c0392b;
+        }
+
+        .approveBtn div.rejected:hover{
+            background: #e74c3c;
+            color: white;
+            font-weight: bold;
+        }
+
+        .approveBtn div.left {
+            border-right: none;
+            border-radius: 5px 0px 0px 5px;
+        }
+
+        .approveBtn div.rigth {
+            border-radius: 0px 5px 5px 0px;
+        }
+
+        .approveBtn div.selected{
+            padding: 5px 15px;
+        }
+    </style>
+
+    <div class="approveBtn">
+        <div class="approved left">&#x2713</div>
+        <div class="rejected rigth">×</div>
+    </div>
+
+    <script src="./src/main.js"></script>
+</body>
+
+</html>
